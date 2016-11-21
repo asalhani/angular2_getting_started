@@ -12,6 +12,11 @@ var core_1 = require('@angular/core');
 var ProductListComponent = (function () {
     function ProductListComponent() {
         this.pageTitle = 'Product List';
+        this.imageWidth = 60;
+        this.imageHeight = 60;
+        this.imageMargin = 2;
+        this.showImage = false;
+        this.listFilter = "cart";
         this.products = [
             {
                 "productId": 1,
@@ -34,6 +39,9 @@ var ProductListComponent = (function () {
                 "imageUrl": "http://openclipart.org/image/300px/svg_to_png/58471/garden_cart.png"
             }];
     }
+    ProductListComponent.prototype.toggleImages = function () {
+        this.showImage = !this.showImage;
+    };
     ProductListComponent = __decorate([
         core_1.Component({
             selector: 'pm-products',

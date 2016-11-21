@@ -6,6 +6,16 @@ import {Component} from '@angular/core'
 })
 export class ProductListComponent{
     pageTitle:string = 'Product List';
+    imageWidth:number = 60;
+    imageHeight:number = 60;
+    imageMargin:number = 2;
+    showImage:boolean = false;
+    listFilter:string = "cart";
+
+    toggleImages(): void{
+        this.showImage = !this.showImage;
+    }
+
     products: any[] = [
     {
         "productId": 1,
