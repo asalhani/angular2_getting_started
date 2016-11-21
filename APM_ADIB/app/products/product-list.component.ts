@@ -8,8 +8,8 @@ import {IProduct} from './product'
 })
 export class ProductListComponent{
     pageTitle:string = "List of Products";
-    listFilter:string = "cart";
-    showImage:boolean = false;
+    listFilter:string = "";
+    showImage:boolean = true;
     imageHeigh :number = 30;
     imageWidth :number = 30;
     imageMargin: number = 2;

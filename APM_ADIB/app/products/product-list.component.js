@@ -12,8 +12,8 @@ var core_1 = require('@angular/core');
 var ProductListComponent = (function () {
     function ProductListComponent() {
         this.pageTitle = "List of Products";
-        this.listFilter = "cart";
-        this.showImage = false;
+        this.listFilter = "";
+        this.showImage = true;
         this.imageHeigh = 30;
         this.imageWidth = 30;
         this.imageMargin = 2;
