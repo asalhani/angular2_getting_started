@@ -15,7 +15,7 @@ var AppComponent = (function () {
     AppComponent = __decorate([
         core_1.Component({
             selector: 'pm-app',
-            template: '<h1>Angular2: Getting Started</h1>'
+            template: ' <pm-products></pm-products> '
         }), 
         __metadata('design:paramtypes', [])
     ], AppComponent);
