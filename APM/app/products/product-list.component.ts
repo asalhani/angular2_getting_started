@@ -1,10 +1,11 @@
-import {Component} from '@angular/core'
-
+import {Component, OnInit} from '@angular/core'
+import {IProduct} from './product'
 @Component({
     selector:'pm-products',
     templateUrl: 'app/products/product-list.component.html',
+    styleUrls:['app/products/product-list.component.css']
 })
-export class ProductListComponent{
+export class ProductListComponent implements OnInit{
     pageTitle:string = 'Product List';
     imageWidth:number = 60;
     imageHeight:number = 60;
@@ -16,7 +17,7 @@ export class ProductListComponent{
         this.showImage = !this.showImage;
     }
 
-    products: any[] = [
+    products: IProduct[] = [
     {
         "productId": 1,
         "productName": "Leaf Rake",
@@ -37,4 +38,8 @@ export class ProductListComponent{
         "starRating": 4.2,
         "imageUrl": "http://openclipart.org/image/300px/svg_to_png/58471/garden_cart.png"
     }];  
+
+     ngOnInit(){
+        console.log("message from ngOnInint");
+    }
 }
