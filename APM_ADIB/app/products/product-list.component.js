@@ -9,35 +9,17 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
+var product_service_1 = require('./product.service');
 var ProductListComponent = (function () {
-    function ProductListComponent() {
+    function ProductListComponent(_productService) {
+        this._productService = _productService;
         this.pageTitle = "List of Products";
         this.listFilter = "";
         this.showImage = true;
         this.imageHeigh = 30;
         this.imageWidth = 30;
         this.imageMargin = 2;
-        this.products = [
-            {
-                "productId": 1,
-                "productName": "Leaf Rake",
-                "productCode": "GDN-0011",
-                "releaseDate": "March 19, 2016",
-                "description": "Leaf rake with 48-inch wooden handle.",
-                "price": 19.95,
-                "starRating": 3.2,
-                "imageUrl": "http://openclipart.org/image/300px/svg_to_png/26215/Anonymous_Leaf_Rake.png"
-            },
-            {
-                "productId": 2,
-                "productName": "Garden Cart",
-                "productCode": "GDN-0023",
-                "releaseDate": "March 18, 2016",
-                "description": "15 gallon capacity rolling garden cart",
-                "price": 32.99,
-                "starRating": 4.2,
-                "imageUrl": "http://openclipart.org/image/300px/svg_to_png/58471/garden_cart.png"
-            }];
+        this.products = this._productService.getProducts();
     }
     ProductListComponent.prototype.toggleImage = function () {
         this.showImage = !this.showImage;
@@ -48,7 +30,7 @@ var ProductListComponent = (function () {
             selector: "pm-products",
             templateUrl: "product-list.component.html",
         }), 
-        __metadata('design:paramtypes', [])
+        __metadata('design:paramtypes', [product_service_1.ProductService])
     ], ProductListComponent);
     return ProductListComponent;
 }());
