@@ -19,10 +19,14 @@ var ProductListComponent = (function () {
         this.imageHeigh = 30;
         this.imageWidth = 30;
         this.imageMargin = 2;
-        this.products = this._productService.getProducts();
     }
     ProductListComponent.prototype.toggleImage = function () {
         this.showImage = !this.showImage;
+    };
+    ProductListComponent.prototype.ngOnInit = function () {
+        var _this = this;
+        this._productService.getProducts()
+            .subscribe(function (products) { return _this.products = products; }, function (error) { return _this.errorMessage = error; });
     };
     ProductListComponent = __decorate([
         core_1.Component({
