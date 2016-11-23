@@ -25,7 +25,7 @@ var AppModule = (function () {
                 app_component_1.AppComponent,
                 product_list_component_1.ProductListComponent,
                 product_filter_pipe_1.ProductFilterPipe,
-                star_component_1.StarComponent
+                star_component_1.StarComponent,
             ],
             bootstrap: [app_component_1.AppComponent]
         }), 
